@@ -3,245 +3,215 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Asad Iqbal's Portfolio Starfield</title>
+    <title>TG Wholesale - Mobile Accessories Portugal</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Feather Icons for simple icons -->
+    <script src="https://unpkg.com/feather-icons"></script>
+
     <style>
-       body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow-x: hidden;
-    background-color: #1a1a2e; /* Dark navy blue for a modern feel */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Professional font */
-    color: #e0e0e0; /* Light gray for readable text */
-}
-
-.content {
-    position: relative;
-    z-index: 1;
-    padding: 20px;
-    max-width: 80%;
-    margin: auto;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1s ease-out, transform 1s ease-out;
-    background: rgba(255, 255, 255, 0.05); /* Light background for contrast */
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
-}
-
-.content.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.starfield {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 0;
-}
-
-.star {
-    position: absolute;
-    background-color: #fff;
-    border-radius: 50%;
-    filter: blur(0.5px);
-    animation: twinkle linear infinite;
-}
-
-@keyframes twinkle {
-    0% {
-        opacity: 0;
-        transform: translate(0, 0);
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        transform: translate(-100vw, 100vh);
-    }
-}
-
-header h1, header p {
-    text-align: center;
-    color: #00e0ff; /* Bright cyan for headers */
-    margin-bottom: 10px;
-}
-
-section h2 {
-    color: #00e0ff; /* Consistent bright cyan for section titles */
-    text-align: center;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-ul {
-    list-style: none;
-    padding: 0;
-    text-align: center;
-}
-
-ul li {
-    display: inline-block;
-    margin: 10px 15px;
-    padding: 10px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    transition: transform 0.3s ease, font-weight 0.3s ease, background-color 0.3s ease;
-    background-color: #333; /* Dark background for items */
-}
-
-ul li:hover {
-    transform: translateX(-10px);
-    font-weight: bold;
-    background-color: #444; /* Slightly lighter on hover */
-}
-
-ul li a {
-    color: #00e0ff; /* Bright cyan for links */
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-ul li a:hover {
-    color: #ffcc00; /* Soft yellow on hover */
-}
-
-footer {
-    text-align: center;
-    margin-top: 20px;
-    color: #cccccc;
-    padding: 10px;
-    border-top: 1px solid #333;
-}
-
-.email-link {
-    color: #00e0ff; /* Bright cyan for email link */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.email-link:hover {
-    color: #ffcc00; /* Highlight on hover */
-}
-
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center;
+        }
+        .section-subtitle {
+            @apply text-lg text-gray-600 mb-12 text-center max-w-3xl mx-auto;
+        }
+        .product-card {
+            @apply bg-white rounded-xl shadow-lg overflow-hidden transform hover:scale-105 transition-transform duration-300 ease-in-out;
+        }
     </style>
 </head>
-<body>
-    <div class="starfield" id="starfield"></div>
-    <div class="content" id="header-content">
-        <header>
-            <h1>Asad Iqbal</h1>
-            <p>Enthusiastic Computer Science student passionate about web development and AI integration.</p>
-            <p>Contact: <a href="mailto:measad408@gmail.com" class="email-link">measad408@gmail.com</a> | <a href="https://github.com/Asad-Iqbal407" target="_blank">GitHub</a></p>
-        </header>
-    </div>
+<body class="bg-gray-50">
 
-    <div class="content" id="skills-content">
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li>Python</li>
-                <li>JavaScript</li>
-                <li>MERN Development</li>
-                <li>PHP</li>
-                <li>HTML/CSS</li>
-                <li>Flask</li>
-                <li>Machine Learning</li>
-            </ul>
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-3">
+                <div class="w-12 h-12 gradient-bg rounded-full flex items-center justify-center">
+                    <span class="text-white font-bold text-2xl">TG</span>
+                </div>
+                <span class="text-xl font-semibold text-gray-700">TG Wholesale</span>
+            </a>
+            
+            <!-- Desktop Navigation Links -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#products" class="text-gray-600 hover:text-blue-600 transition-colors">Products</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About Us</a>
+                <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors shadow-md">Contact</a>
+            </div>
+            
+            <!-- Mobile Menu Button (optional, for future expansion) -->
+            <div class="md:hidden">
+                <a href="#contact" class="bg-blue-600 text-white px-5 py-2 rounded-full hover:bg-blue-700 transition-colors shadow-md">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="gradient-bg text-white">
+            <div class="container mx-auto px-6 py-20 md:py-32 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Your Trusted Partner for Wholesale Mobile Accessories</h1>
+                <p class="text-lg md:text-xl text-blue-100 mb-8 max-w-3xl mx-auto">Sourcing high-quality charging cables, power banks, and more for retailers across Portugal.</p>
+                <a href="#products" class="bg-white text-blue-600 font-bold py-3 px-8 rounded-full text-lg hover:bg-gray-100 transition-transform transform hover:scale-105 shadow-xl">Explore Our Products</a>
+            </div>
         </section>
-    </div>
 
-    <div class="content" id="projects-content">
-        <section id="projects">
-            <h2>Projects</h2>
-            <ul>
-                <li><strong>Healthcare Website:</strong> Disease prediction using Flask and Firebase, integrating ML models.</li>
-                <li><strong>Personal Portfolio Website:</strong> Full-stack site with separate pages for education, career, skills, and certificates.</li>
-                <li><strong>E-commerce Platform:</strong> MERN stack-based site with user authentication and product management.</li>
-                <li><strong>AI Integration in Web Applications:</strong> Integrated AI models for predictive analytics and recommendations.</li>
-            </ul>
+        <!-- About Us Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Quality Accessories for Your Business</h2>
+                <p class="section-subtitle">
+                    At TG Wholesale, we specialize in importing reliable and certified mobile accessories directly from trusted manufacturers. Our mission is to provide local shops in Portugal with a competitive edge through quality products, great value, and a dependable supply chain.
+                </p>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                            <i data-feather="check-circle" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Quality Guaranteed</h3>
+                        <p class="text-gray-600">We source and test products to ensure they meet high standards for durability and performance.</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                             <i data-feather="truck" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Reliable Supply</h3>
+                        <p class="text-gray-600">Consistent stock of essential accessories to keep your shelves full.</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-blue-100 text-blue-600 mx-auto mb-4">
+                             <i data-feather="dollar-sign" class="w-8 h-8"></i>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-2">Competitive Pricing</h3>
+                        <p class="text-gray-600">Benefit from our direct sourcing to offer great prices to your customers.</p>
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
 
-    <div class="content" id="education-content">
-        <section id="education">
-            <h2>Education</h2>
-            <p>Bachelor of Science in Computer Science, July 2024</p>
-            <p>University of Gujrat Sub Campus Mandi Baha Uddin, Mandi Bahauddin, Punjab, Pakistan</p>
+        <!-- Products Section -->
+        <section id="products" class="py-20 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Our Core Products</h2>
+                <p class="section-subtitle">We focus on the most in-demand accessories for all major device types. Contact us for a full catalog and wholesale pricing.</p>
+                
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Product Card 1 -->
+                    <div class="product-card">
+                        <img src="https://placehold.co/600x400/3b82f6/ffffff?text=USB-C+Cables" alt="USB-C Charging Cables" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">USB-C Cables</h3>
+                            <p class="text-gray-600 mt-2">Fast-charging and durable cables for modern Android devices, laptops, and more.</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Product Card 2 -->
+                    <div class="product-card">
+                        <img src="https://placehold.co/600x400/1e3a8a/ffffff?text=Lightning+Cables" alt="Lightning Cables for iPhone" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Lightning Cables</h3>
+                            <p class="text-gray-600 mt-2">MFi-certified quality cables for all modern iPhone and iPad models.</p>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="product-card">
+                        <img src="https://placehold.co/600x400/60a5fa/ffffff?text=Wall+Chargers" alt="Wall Chargers" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Wall Chargers</h3>
+                            <p class="text-gray-600 mt-2">Multi-port and high-wattage chargers for efficient power delivery.</p>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="product-card">
+                        <img src="https://placehold.co/600x400/93c5fd/ffffff?text=Power+Banks" alt="Power Banks" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800">Power Banks</h3>
+                            <p class="text-gray-600 mt-2">Compact and high-capacity portable chargers for power on the go.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
 
-    <div class="content" id="certifications-content">
-        <section id="certifications">
-            <h2>Certifications</h2>
-            <ul>
-                <li><a href="https://www.linkedin.com/learning/certificates/1a0836280fccd3487fca28edce2c52e949f9ef82b18196d88f849851b1f49b45?trk=share_certificate" target="_blank">React.js Certification</a></li>
-                <li><a href="https://www.linkedin.com/learning/certificates/ebfda41df6410f97ba15f155c1ffed28e257c0c96a4464c5e9df05871deb17e3?trk=share_certificate" target="_blank">Node.js Certification</a></li>
-                <li><a href="https://www.linkedin.com/learning/certificates/6e4138cd0737cc95f6ce73d8ef23dba53c961800fa01c9db09713d5fb490b117?trk=share_certificate" target="_blank">PHP & MySQL Certification</a></li>
-                <li><a href="https://www.linkedin.com/learning/certificates/be3e2b2fbc3d16964905a846e9cade13a597934822560141bff571b96a2c13aa?trk=share_certificate" target="_blank">Flask Certification</a></li>
-                <li><a href="https://www.mygreatlearning.com/certificate/FPMZDTXL" target="_blank">Machine Learning Certification</a></li>
-            </ul>
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="container mx-auto px-6">
+                <h2 class="section-title">Get in Touch</h2>
+                <p class="section-subtitle">
+                    Ready to stock your shop with high-quality mobile accessories? Contact us today for our full product list and wholesale pricing. We look forward to partnering with you.
+                </p>
+                <div class="max-w-lg mx-auto bg-gray-50 rounded-xl shadow-lg p-8">
+                    <div class="flex flex-col space-y-6">
+                         <div class="flex items-center space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                                <i data-feather="user" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-700">Contact Person</h3>
+                                <p class="text-gray-900 text-lg">Tashawar Gondal</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                                <i data-feather="mail" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-700">Email Address</h3>
+                                <a href="mailto:tariq.gondal7786@gmail.com" class="text-blue-600 hover:underline text-lg">tariq.gondal7786@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="flex-shrink-0 w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center">
+                                <i data-feather="phone" class="w-6 h-6"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-lg font-semibold text-gray-700">Phone Number</h3>
+                                <a href="tel:0035192587055" class="text-gray-900 hover:text-blue-600 text-lg">00351 925 870 55</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
-    </div>
+    </main>
 
-    <footer class="content" id="footer-content">
-        <p>&copy; 2024 Asad Iqbal. All rights reserved.</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-8 text-center">
+            <a href="#" class="flex items-center justify-center space-x-3 mb-4">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center">
+                    <span class="text-blue-600 font-bold text-xl">TG</span>
+                </div>
+                <span class="text-xl font-semibold">TG Wholesale</span>
+            </a>
+            <p class="mb-4">Your partner for mobile accessories in Portugal.</p>
+            <p class="text-gray-400 text-sm">&copy; 2024 TG Wholesale. All Rights Reserved.</p>
+        </div>
     </footer>
 
     <script>
-        function createStar() {
-            const star = document.createElement('div');
-            star.className = 'star';
-            
-            const size = Math.random() * 3 + 1;
-            star.style.width = `${size}px`;
-            star.style.height = `${size}px`;
-            
-            star.style.left = `${Math.random() * 100}%`;
-            star.style.top = `${Math.random() * 100}%`;
-            
-            const duration = Math.random() * 15 + 5;
-            star.style.animationDuration = `${duration}s`;
-            
-            const delay = Math.random() * 5;
-            star.style.animationDelay = `${delay}s`;
-            
-            const brightness = Math.random();
-            star.style.opacity = brightness;
-            star.style.boxShadow = `0 0 ${size * 2}px rgba(255, 255, 255, ${brightness * 0.5})`;
-            
-            return star;
-        }
-
-        const starfield = document.getElementById('starfield');
-        const starCount = 150;
-
-        for (let i = 0; i < starCount; i++) {
-            starfield.appendChild(createStar());
-        }
-
-        // Scroll effects using Intersection Observer
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('show');
-                } else {
-                    entry.target.classList.remove('show');
-                }
-            });
-        });
-
-        // Target all elements with class 'content'
-        const contents = document.querySelectorAll('.content');
-        contents.forEach(content => observer.observe(content));
+        // Initialize Feather Icons
+        feather.replace();
     </script>
+
 </body>
 </html>
